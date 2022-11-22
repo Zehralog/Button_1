@@ -49,15 +49,9 @@
 
 <body>
     <a href=""><button ontouchstart="myFunction()" ontouchend="myyFunction()" class="button"></button></a>
-    <script>
+    <script type="text/javascript" src="https://unpkg.com/default-passive-events">
         function myFunction() {
             document.getElementById("demo").style.background = 'url("./on.png")'
-            passive: true
-        };
-
-        function myyFunction() {
-            document.getElementById("demo").style.background = 'url("./off.png")'
-            passive: true
         };
     </script>
 </body>
