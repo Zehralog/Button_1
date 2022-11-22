@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        a {
+            padding: 0;
+            margin-top: 50px;
+            text-align: center;
+            box-sizing: border-box;
+            position: absolute;
+            margin-left: 20%;
+            text-shadow: 0 20px 30px rgba(0, 0, 0, .8);
+            border-radius: 10px;
+        }
+        
+        .button {
+            padding: 0;
+            margin: 0;
+            width: 150px;
+            height: 250px;
+            border: 3px solid wheat;
+            border-radius: 5rem;
+            position: relative;
+            transition-duration: .60s;
+            background-image: url(./off.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 180px;
+            cursor: pointer;
+        }
+        /*.button:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+            transform: scale(.95);
+        } */
+        
+        .button:active {
+            background-image: url(./on.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href=""><button ontouchstart="myFunction()" ontouchend="myyFunction()" class="button"></button></a>
+    <script>
+        function myFunction() {
+            document.getElementById("demo").style.background = 'url("./on.png")'
+        };
+
+        function myyFunction() {
+            document.getElementById("demo").style.background = 'url("./off.png")'
+        };
+    </script>
+</body>
+
+</html>
