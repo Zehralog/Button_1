@@ -48,11 +48,22 @@
 </head>
 
 <body>
-    <a href=""><button ontouchstart="myFunction()" ontouchend="myyFunction()" class="button"></button></a>
-    <script type="text/javascript" src="https://unpkg.com/default-passive-events">
-        function myFunction() {
-            document.getElementById("demo").style.background = 'url("./on.png")'
-        };
+    <a href=""><button id="button" ontouchstart="downClick()" ontouchend="upClick()" onmousedown="downClick" onmouseup="upClick" class="button"></button></a>
+    <script>
+        var upImage = "./off.png";
+        var downImage = "./on.png";
+
+        function upClick() {
+            console.log("up click");
+            var button = document.getElementById("button")
+            button.style.backgroundImage = 'url("' + upImage + '")';
+        }
+
+        function downClick() {
+            console.log("down click");
+            var button = document.getElementById("button");
+            button.style.backgroundImage = 'url("' + downImage + '")';
+        }
     </script>
 </body>
 
